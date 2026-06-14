@@ -1,0 +1,34 @@
+proxy-groups:
+  - name: "♻️ ChatGPT_AI优选"
+    type: url-test
+    url: "https://chatgpt.com"
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "❸gR.TW桃园|荐|NF|D+|AI x0.1"
+      - "⑥V2.TW彰化|NF|D+|AI x1"
+      - "❸gR.TW宝岛|荐|NF|D+|AI x1"
+      - "❸gR.TW台北|荐|NF|D+|AI x1"
+      - "⑥V2.TW剑魂|NF|D+|AI x1"
+      - "❸gR.US川谱|v6|NF*|D+|AI x1"
+      - "⑥gR.US无量 [下载专用]|NF*|AI x0"
+
+  - name: "🤖 ChatGPT"
+    type: select
+    proxies:
+      - "♻️ ChatGPT_AI优选"
+      - "❸gR.TW桃园|荐|NF|D+|AI x0.1"
+      - "⑥V2.TW彰化|NF|D+|AI x1"
+      - "❸gR.TW宝岛|荐|NF|D+|AI x1"
+      - "❸gR.TW台北|荐|NF|D+|AI x1"
+      - "⑥V2.TW剑魂|NF|D+|AI x1"
+      - "❸gR.US川谱|v6|NF*|D+|AI x1"
+      - "⑥gR.US无量 [下载专用]|NF*|AI x0"
+      - DIRECT
+
+rules:
+  - "DOMAIN-SUFFIX,openai.com,🤖 ChatGPT"
+  - "DOMAIN-SUFFIX,chatgpt.com,🤖 ChatGPT"
+  - "DOMAIN-SUFFIX,oaistatic.com,🤖 ChatGPT"
+  - "DOMAIN-SUFFIX,oaiusercontent.com,🤖 ChatGPT"
+  - "DOMAIN-KEYWORD,openai,🤖 ChatGPT"
